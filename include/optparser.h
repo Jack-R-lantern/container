@@ -1,5 +1,5 @@
-#ifndef __UTILITY_H__
-#define __UTILITY_H__
+#ifndef __OPTPARSER_H__
+#define __OPTPARSER_H__
 
 #include "config.h"
 

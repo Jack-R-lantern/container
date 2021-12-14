@@ -1,7 +1,7 @@
-#include "utility.h"
+#include "optparser.h"
 
 int		main(int argc, char** argv) {
-	child_config_t	c_config;
-	optparser(&c_config, argc, argv);
+	child_config_t	config = { 0 };
+	optparser(&config, argc, argv);
 	return 0;
 }
