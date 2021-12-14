@@ -5,11 +5,11 @@ on:
     paths:
       - 'src/**'
       - '.github/workflows/**'
-    branchs: [ main, Environment/Github ]
+    branches: [ main, Environment/Github ]
   pull_request:
     paths:
       - 'src/**'
-    branchs: [ main ]
+    branches: [ main ]
 
 jobs:
   debian-build:
