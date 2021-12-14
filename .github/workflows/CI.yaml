@@ -1,0 +1,25 @@
+name: my_container_CI
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - '.github/workflows/**'
+    branchs: [ main, Environment/Github ]
+  pull_request:
+    paths:
+      - 'src/**'
+    branchs: [ main ]
+
+jobs:
+  debian-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install library
+        run: sudo apt-get install libcap-dev && sudo apt-get install libseccomp-dev
+
+      - name: GCC
+        run: gcc --version
